@@ -34,8 +34,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12 p-0">
-          <nav
-            class="navbar navbar-expand-lg navbar-dark p-0"
+          <nav class="navbar navbar-expand-lg navbar-dark p-0 "
             style="background-color: #fbfbfb"
           >
             <div class="container-fluid">
@@ -47,7 +46,7 @@
                 />
               </a>
               <button
-                class="navbar-toggler"
+                class="navbar-toggler bg-secondary"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent"
@@ -692,9 +691,11 @@
       $(document).ready(function () {
         $(window).scroll(function () {
           if ($(this).scrollTop() > 300) {
-            $(".navbar").addClass("fixed-top");
+            $(".navbar").addClass("fixed-top shadow");
+            $(".logo-height").addClass("logo-height-scroll")
           } else {
-            $(".navbar").removeClass("fixed-top");
+            $(".navbar").removeClass("fixed-top shadow");
+            $(".logo-height").removeClass("logo-height-scroll")
           }
         });
       });
