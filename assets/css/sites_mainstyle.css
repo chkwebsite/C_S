@@ -505,13 +505,17 @@ li.active {
   }
   .progress-section img{
     width: 100%;
-    height: auto !important;
+    height: auto;
   }
   .overlay-text:before {
     left: 0px;
 }
 .logo-height {
   height: 75px;
+}
+.hand-s{
+  height:60px !important;
+  margin-top: 20px;
 }
 }
 section {
@@ -527,6 +531,9 @@ section {
 /* .single_footer{} */
 @media only screen and (max-width:768px) { 
 .single_footer{margin-bottom:30px;}
+}
+.hand-s{
+  margin-top: 20px;
 }
 .single_footer h4 {
 color: #fff;
