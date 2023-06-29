@@ -493,12 +493,27 @@ li.active {
   .progress-section{
     flex-direction: column;
   }
+ 
   .bord-rig {
     width: 100%;
   }
 }
 /* FOOTER  */
-
+@media (max-width:450px){
+  .progress-section{
+   text-align: center;
+  }
+  .progress-section img{
+    width: 100%;
+    height: auto !important;
+  }
+  .overlay-text:before {
+    left: 0px;
+}
+.logo-height {
+  height: 75px;
+}
+}
 section {
   padding: 60px 0;
  /* min-height: 100vh;*/
