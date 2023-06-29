@@ -59,7 +59,7 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"
+                    <a class="nav-link active" aria-current="page" href="index.html"
                       >Home</a
                     >
                   </li>
@@ -254,10 +254,10 @@
                 <div class="col-lg-10 col-sm-12 m-auto ">
                   <div class="progress-section">
                     <div>
-                      <img src="assets/images/c-logo.png" height="100px" alt="c-logo">
+                      <img src="assets/images/c-logo.png" height="150px" alt="c-logo">
                     </div>
                     <div>
-                      <img src="assets/images/hand.png" height="100px" alt="c-logo">
+                      <img src="assets/images/hand.png" height="60px" alt="c-logo">
                     </div>
                     <div>
                       <img src="assets/images/progress.png" height="100px" alt="c-logo">
@@ -340,6 +340,28 @@
                                     </div>
                                 </div>
                             </div>
+
+
+
+
+                            <div class="slider">
+                              <img src="assets/images/reactjs_logo.png" />
+                              <img src="assets/images/angular_logo.png" />
+                              <img src="assets/images/reactjs_logo.png" />
+                              <img src="assets/images/angular_logo.png" />
+                              <img src="assets/images/reactjs_logo.png" />
+                              <img src="assets/images/angular_logo.png" />
+                              <img src="assets/images/reactjs_logo.png" />
+                              <img src="assets/images/angular_logo.png" />
+                              <img src="assets/images/reactjs_logo.png" />
+                              <img src="assets/images/angular_logo.png" />
+                          </div>
+
+
+
+
+
+
                         </div>
                     </div>
                 </div>
@@ -617,6 +639,7 @@
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/all.min.js"></script>
     <script type="text/javascript" src="assets/css/aos/aos.js"></script>
+    <script type="text/javascript" src="assets/js/slick.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
         $(window).scroll(function () {
@@ -630,6 +653,75 @@
         });
       });
     </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+              // jQuery(function ($){
+                                  
+                  $(" nav ul a")
+                  .click(function (e) {
+                      var link = $(this);
+  
+                      var item = link.parent("li");
+  
+                      if (item.hasClass("active")) {
+                          item.addClass("active").children("a").removeClass("active");
+                      } else {
+                          item.addClass("active").children("a").addClass("active");
+                      }
+  
+                      if (item.children("ul").length > 0) {
+                          var href = link.attr("href");
+                          link.attr("href", "#");
+                          setTimeout(function () {
+                              link.attr("href", href);
+                          }, 300);
+                          e.preventDefault();
+                      }
+                  })
+                  .each(function () {
+                      var link = $(this);
+                      if (link.get(0).href === location.href) {
+                          link.addClass("active").parents("li").addClass("active");
+                          return false;
+                      }
+                  });
+  
+                 
+                  
+          });
+     
+  </script>
+
+  <script>
+    jQuery(document).ready(function($) {
+      $('.slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: true,
+        responsive: [{
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+           breakpoint: 400,
+           settings: {
+              arrows: false,
+              slidesToShow: 1,
+              slidesToScroll: 1
+           }
+        }]
+    });
+});
+
+  </script>
     <!-- HOME SLIDER  -->
   </body>
 </html>
