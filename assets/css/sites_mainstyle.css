@@ -1,6 +1,6 @@
 /* Top Navbar CSS  */
 .p-color{
-    color: #476811 !important; 
+    color: #fff !important; 
 }
 .nav-link {
     color: #333333 !important;
@@ -179,6 +179,7 @@
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    align-items: center;
 }
 .client-sy-left-content img{
     width: 80px;
