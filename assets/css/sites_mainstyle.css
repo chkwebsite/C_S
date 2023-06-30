@@ -53,6 +53,9 @@
   .carousel-item {
     height: 500px;
 }
+.dropdown-item.active, .dropdown-item:active {
+  background-color: #a8e645;
+}
 .carousel-item img{
   object-fit: cover;
 }
